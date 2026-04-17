@@ -7,7 +7,9 @@ export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
     plugins: [react(), tailwindcss()],
-    base: './',
+    // GitHub Pages 배포 시 저장소 이름을 입력하세요.
+    // 예: https://github.com/my-name/my-portfolio 라면 '/my-portfolio/'
+    base: '/본인의-레포지토리-이름/', 
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
